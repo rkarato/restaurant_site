@@ -1,51 +1,48 @@
-import Link from 'next/link';
 
 export default function Inicio() {
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-60">
-          <div className="w-full h-full bg-gray-800 animate-pulse flex items-center justify-center">
-            <span className="text-gray-500">Imagen de Fondo: Vista del Restaurante</span>
-          </div>
-        </div>
-        <div className="relative z-10 text-center px-4 max-w-3xl">
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-6 leading-tight">
-            Sabor Auténtico en <span className="text-amber-500">Isla Canela</span>
+    <main className="p-8">
+      <div className="relative w-full h-[500px] rounded-2xl overflow-hidden mb-12">
+        <img 
+          src="/images/Pic46.34 (2).jpeg" 
+          alt="Nuestro Restaurante" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-center p-4">
+          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
+            Bienvenidos a Nuestro Restaurante
           </h1>
-          <p className="text-lg md:text-xl mb-8 text-gray-200">
-            Una experiencia culinaria inolvidable donde la frescura del mar se encuentra con la tradición española.
+          <p className="text-xl text-gray-200 mb-8 max-w-2xl">
+            Disfruta de la mejor cocina local en el corazón de Isla Canela. Sabores auténticos y una experiencia inolvidable.
           </p>
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Link href="/reservas" className="bg-amber-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-amber-700 transition transform hover:scale-105">
+          <div className="flex gap-4">
+            <a href="/reservas" className="bg-amber-600 hover:bg-amber-700 text-white px-8 py-3 rounded-full font-semibold transition-all">
               Reservar Mesa
-            </Link>
-            <Link href="/menu" className="bg-white text-gray-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition transform hover:scale-105">
+            </a>
+            <a href="/menu" className="bg-white hover:bg-gray-100 text-gray-900 px-8 py-3 rounded-full font-semibold transition-all">
               Ver Menú
-            </Link>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* Quick Features */}
-      <section className="py-20 px-4 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
-        <div>
-          <div className="text-amber-600 text-4xl mb-4">🐟</div>
+      <section className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="p-6 bg-gray-50 rounded-xl text-center border border-gray-100">
+          <div className="text-4xl mb-4">🌿</div>
           <h3 className="text-xl font-bold mb-2">Productos Frescos</h3>
-          <p className="text-gray-600">Trabajamos directamente con pescadores locales para garantizar la calidad.</p>
+          <p className="text-gray-600">Ingredientes locales seleccionados diariamente.</p>
         </div>
-        <div>
-          <div className="text-amber-600 text-4xl mb-4">🍷</div>
+        <div className="p-6 bg-gray-50 rounded-xl text-center border border-gray-100">
+          <div className="text-4xl mb-4">🍷</div>
           <h3 className="text-xl font-bold mb-2">Bodega Seleccionada</h3>
-          <p className="text-gray-600">Una carta de vinos cuidadosamente elegidos para maridar cada plato.</p>
+          <p className="text-gray-600">La mejor selección de vinos para maridar tus platos.</p>
         </div>
-        <div>
-          <div className="text-amber-600 text-4xl mb-4">🌅</div>
-          <h3 className="text-xl font-bold mb-2">Vista Privilegiada</h3>
-          <p className="text-gray-600">Disfruta de tus comidas con la mejor vista de la isla.</p>
+        <div className="p-6 bg-gray-50 rounded-xl text-center border border-gray-100">
+          <div className="text-4xl mb-4">🌅</div>
+          <h3 className="text-xl font-bold mb-2">Vistas Privilegiadas</h3>
+          <p className="text-gray-600">Un entorno tranquilo y hermoso para disfrutar.</p>
         </div>
       </section>
-    </div>
+    </main>
   );
 }

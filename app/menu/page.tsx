@@ -1,38 +1,84 @@
-export default function Menu() {
-  const dishes = [
-    { name: "Paella Valenciana", price: "18€", desc: "Arroz tradicional con conejo, pollo y judías verdes.", img: "Paella" },
-    { name: "Gambas al Ajillo", price: "14€", desc: "Gambas frescas salteadas con ajo y guindilla.", img: "Gambas" },
-    { name: "Pulpo a la Gallega", price: "16€", desc: "Pulpo cocido con pimentón y aceite de oliva virgen.", img: "Pulpo" },
-    { name: "Lubina a la Espalda", price: "22€", desc: "Lubina fresca asada al horno con verduras.", img: "Lubina" },
-    { name: "Tarta de Queso", price: "8€", desc: "Tarta cremosa casera con frutos rojos.", img: "Postre" },
-    { name: "Croquetas de Jamón", price: "12€", desc: "Croquetas cremosas de jamón ibérico.", img: "Croquetas" },
-  ];
 
+export default function Menu() {
   return (
-    <main className="py-20 px-4 max-w-7xl mx-auto">
+    <main className="p-8 max-w-6xl mx-auto">
       <div className="text-center mb-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4">Nuestro Menú</h1>
-        <div className="w-24 h-1 bg-amber-600 mx-auto"></div>
-        <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
-          Descubre una fusión de sabores tradicionales y toques modernos, elaborados con los mejores ingredientes de la zona.
+        <h1 className="text-5xl font-bold mb-4">Nuestro Menú</h1>
+        <p className="text-gray-600 max-w-2xl mx-auto">
+          Descubre una fusión de sabores tradicionales y toques modernos, preparados con pasión y productos de temporada.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {dishes.map((dish, index) => (
-          <div key={index} className="group bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition">
-            <div className="h-56 bg-gray-200 flex items-center justify-center text-gray-400 group-hover:bg-gray-300 transition">
-              Foto de {dish.img}
-            </div>
-            <div className="p-6">
-              <div className="flex justify-between items-center mb-2">
-                <h3 className="text-xl font-bold">{dish.name}</h3>
-                <span className="text-amber-600 font-bold">{dish.price}</span>
-              </div>
-              <p className="text-gray-600 text-sm">{dish.desc}</p>
-            </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        
+        <div className="flex gap-6 items-start p-4 rounded-2xl hover:bg-gray-50 transition-all">
+          <div className="w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden">
+            <img 
+              src="/images/Pic46.28 (6).jpeg" 
+              alt="Plato Estrella" 
+              className="w-full h-full object-cover"
+            />
           </div>
-        ))}
+          <div>
+            <div className="flex justify-between items-center mb-2">
+              <h3 className="text-xl font-bold">Plato Estrella</h3>
+              <span className="text-amber-600 font-bold">18€</span>
+            </div>
+            <p className="text-gray-600">La especialidad de la casa con ingredientes locales.</p>
+          </div>
+        </div>
+        
+        <div className="flex gap-6 items-start p-4 rounded-2xl hover:bg-gray-50 transition-all">
+          <div className="w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden">
+            <img 
+              src="/images/Pic46.28 (2).jpeg" 
+              alt="Entrante Clásico" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <div className="flex justify-between items-center mb-2">
+              <h3 className="text-xl font-bold">Entrante Clásico</h3>
+              <span className="text-amber-600 font-bold">12€</span>
+            </div>
+            <p className="text-gray-600">Una entrada ligera y refrescante para empezar.</p>
+          </div>
+        </div>
+        
+        <div className="flex gap-6 items-start p-4 rounded-2xl hover:bg-gray-50 transition-all">
+          <div className="w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden">
+            <img 
+              src="/images/Pic46.29 (4).jpeg" 
+              alt="Postre Artesanal" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <div className="flex justify-between items-center mb-2">
+              <h3 className="text-xl font-bold">Postre Artesanal</h3>
+              <span className="text-amber-600 font-bold">8€</span>
+            </div>
+            <p className="text-gray-600">Hecho a mano con recetas tradicionales.</p>
+          </div>
+        </div>
+        
+        <div className="flex gap-6 items-start p-4 rounded-2xl hover:bg-gray-50 transition-all">
+          <div className="w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden">
+            <img 
+              src="/images/Pic46.30 (1).jpeg" 
+              alt="Marisco Fresco" 
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div>
+            <div className="flex justify-between items-center mb-2">
+              <h3 className="text-xl font-bold">Marisco Fresco</h3>
+              <span className="text-amber-600 font-bold">22€</span>
+            </div>
+            <p className="text-gray-600">Capturado hoy mismo en las costas locales.</p>
+          </div>
+        </div>
+        
       </div>
     </main>
   );
