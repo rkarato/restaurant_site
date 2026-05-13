@@ -4,7 +4,7 @@ export default function Inicio() {
     <main className="p-8">
       <div className="relative w-full h-[500px] rounded-2xl overflow-hidden mb-12">
         <img 
-          src="/images/Pic46.34 (2).jpeg" 
+          src="/images/Pic48.06.jpeg" 
           alt="Nuestro Restaurante" 
           className="w-full h-full object-cover"
         />
