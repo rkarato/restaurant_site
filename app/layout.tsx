@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
-  title: "Barca Restaurante | Isla Canela",
+  title: "La Barca | Isla Canela",
   description: "Disfruta de la mejor gastronomía local en Isla Canela.",
 };
 
