@@ -1,6 +1,4 @@
-
 import React from 'react';
-import { Download } from 'lucide-react';
 
 // Data curated from Menutext.md and cross-checked with Menu.pptx
 const menuData = [
@@ -311,6 +309,26 @@ export default function Menu() {
 
   return (
     <main className="p-8 max-w-5xl mx-auto">
+      {/* Language Buttons */}
+      <div className="flex justify-center gap-4 mb-8">
+        <a
+          href="/menu/Menu.pdf"
+          download
+          className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-semibold transition-colors shadow-md"
+        >
+          <span>🇪🇸</span>
+          <span>Menú</span>
+        </a>
+        <a
+          href="/menu/MenuEnglish.pdf"
+          download
+          className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white px-6 py-3 rounded-full font-semibold transition-colors shadow-md"
+        >
+          <span>🇬🇧</span>
+          <span>Menu</span>
+        </a>
+      </div>
+
       <div className="text-center mb-12">
         <h1 className="text-5xl font-bold text-gray-900 mb-4">Nuestro Menú</h1>
         <p className="text-gray-600 text-lg">Sabores auténticos del mar y la tierra en Isla Canela.</p>
@@ -337,19 +355,6 @@ export default function Menu() {
             </div>
           </div>
         ))}
-      </div>
-
-      <div className="mt-20 p-8 rounded-3xl bg-gray-900 text-white text-center space-y-6">
-        <h3 className="text-2xl font-medium">¿Prefiere el menú completo?</h3>
-        <p className="text-gray-400">Descargue nuestra carta completa en formato PDF para ver todas nuestras especialidades.</p>
-        <a 
-          href="/menu/Menu.pdf" 
-          download 
-          className="inline-flex items-center gap-2 bg-amber-600 hover:bg-amber-500 text-white px-8 py-3 rounded-full font-semibold transition-colors"
-        >
-          <Download size={20} />
-          Descargar Menú (PDF)
-        </a>
       </div>
     </main>
   );
