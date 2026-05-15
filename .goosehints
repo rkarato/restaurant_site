@@ -1,0 +1,15 @@
+use uv venv
+initialize git . commit when requested
+use crewai
+use microservices or plan development in a modular way so it can be done step by step
+create regression tests
+use yaml files for configurations and mandatory when using crewai
+use remote deployment, testing and troubleshooting as much as possible
+
+for telkom hosts
+
+dnf packages should check the existance on the host. 
+new packages can be installed.
+existing packages cannot be overwritten and will have to be installed in a separate instance in /opt
+
+Use the goose_runtime library in goose_runtime for all tool lookups and code execution. Use goose_core.search() to find capabilities and sandbox.run_in_sandbox() for tasks.These will optimise the token usage
